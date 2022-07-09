@@ -30,13 +30,14 @@ app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
 
-app.get('/', (req, res) => {
-    res.send('Hello world!');      
-});
-
+// GOLEM USERS
 const userRouter = require("./routes/golem/user");
 app.use("/golem/user", userRouter);
 
+// GOLEM SITES
+
+
+// Listen on earlier specified port
 app.listen(port, () => {
     console.log(`Now listening on port ${port}`); 
 });
