@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { login } from '../../utils/Login';
 import './Login.css';
 
 function Login() {
@@ -9,8 +10,7 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(state.email, state.password)
-        // TODO add in a call to the login api
+        login(state.username, state.password)
     }
 
     const handleChange = (e) => { // Update the state with any change in the input
