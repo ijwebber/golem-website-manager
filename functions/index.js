@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const express = require('express');
+const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
@@ -21,6 +22,14 @@ mongoose.connect(process.env.DATABASE_URI);
 db = mongoose.connection;
 db.on("error", (error) => console.error(error));
 db.once("open", () => console.log("Connected To Database"));
+
+// Allow cross origin from react site
+app.use(
+    cors({
+        credentials: true,
+        origin: "http://localhost:3000",
+    })
+);
 
 app.use(cookieParser());
 app.use(express.json());

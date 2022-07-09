@@ -27,6 +27,7 @@ export const login = async (username, password) => {
       return { success: res.data.success };
     })
     .catch(function (err) {
+      console.log(err)
       return { success: false, errors: err.response.data };
     });
 };

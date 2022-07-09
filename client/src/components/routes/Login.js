@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { login } from '../../utils/Login';
 import './Login.css';
 
@@ -8,9 +9,17 @@ function Login() {
         password: ""
     });
 
+    const navigate = useNavigate();
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        login(state.username, state.password)
+        login(state.username, state.password).then((res) => {
+            if (res.success) {
+                navigate(0);
+            } else {
+                console.log(res.errors)
+            }
+        })
     }
 
     const handleChange = (e) => { // Update the state with any change in the input
