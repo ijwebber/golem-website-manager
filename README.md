@@ -6,6 +6,7 @@
         - Login/Register accounts (with encrypted passwords).
         - Adding and getting website information.
         - Returning/adding reviews for Zephyrhillmusic site.
+        - All data is stored within a MongoDB Database.
     - Frontend 
         - Working login page linked with API to allow access to a minimal homepage.
         - Homepage with option to logout
