@@ -47,6 +47,11 @@ app.use("/golem/user", userRouter);
 const siteRouter = require("./routes/golem/site");
 app.use("/golem/site", siteRouter);
 
+// ZHM REVIEWS
+const zhmReviewRouter = require("./routes/zhm/review");
+app.use("/zhm/review", zhmReviewRouter);
+
+
 // Listen on earlier specified port
 app.listen(port, () => {
     console.log(`Now listening on port ${port}`); 
