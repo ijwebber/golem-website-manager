@@ -44,7 +44,8 @@ const userRouter = require("./routes/golem/user");
 app.use("/golem/user", userRouter);
 
 // GOLEM SITES
-
+const siteRouter = require("./routes/golem/site");
+app.use("/golem/site", siteRouter);
 
 // Listen on earlier specified port
 app.listen(port, () => {

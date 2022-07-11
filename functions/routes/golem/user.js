@@ -31,19 +31,19 @@ router.post("/register", checkAuthenticated, checkAdmin, async (req, res) => {
   User.findOne({ username: newUser.username }).then((user) => {
     if (user) {
       return res.status(400).json({ username: "Username already exists" });
+    } else {
+      // Encrypt the password and then save the user to the database
+      bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(newUser.password, salt, (err, hash) => {
+          if (err) throw err;
+          newUser.password = hash;
+          newUser
+            .save()
+            .then((user) => res.json(user))
+            .catch((err) => console.log(err));
+        });
+      });
     }
-  });
-
-  // Encrypt the password and then save the user to the database
-  bcrypt.genSalt(10, (err, salt) => {
-    bcrypt.hash(newUser.password, salt, (err, hash) => {
-      if (err) throw err;
-      newUser.password = hash;
-      newUser
-        .save()
-        .then((user) => res.json(user))
-        .catch((err) => console.log(err));
-    });
   });
 });
 
