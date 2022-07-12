@@ -1,0 +1,35 @@
+.Error h1{
+    color: rgba(255, 255, 255, 0.056);
+    font-size: 30vw;
+    position: absolute;
+    pointer-events: none;
+}
+
+.Error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Error h2 {
+    color: white;
+    font-size: 5vw;
+}
+
+.Error button {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 5px;
+    border-radius: 100px;
+    border: none;
+    color: white;
+    background: linear-gradient(145deg, #74F1C2, #50A584);
+    cursor: pointer;
+}
+
+.Login button:active {
+    background: linear-gradient(145deg, #94e8c8, #70d2ac);
+    box-shadow: inset 6.91px 6.91px 35px #489578, inset -6.91px -6.91px 35px #7CFFCE;
+}
