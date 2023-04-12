@@ -1,0 +1,74 @@
+.Dashboard h1 {
+    color: white;
+    font-size: 50px;
+    text-align: left;
+}
+
+.Dashboard .SiteComponent {
+    width: 400px;
+    height: 180px;
+    background-color: rgb(57, 57, 57);
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 30px 30px;
+}
+
+.Dashboard .SiteComponent .link {
+    font-size: 15px;
+}
+
+.Dashboard .SiteComponent a {
+    text-decoration: none;
+    color: white;
+}
+
+.Dashboard .SiteComponent .button-container {
+    width: 340px;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 30px;
+}
+
+.Dashboard .SiteComponent .button-container button {
+    width: 150px;
+    height: 45px;
+    margin-top: 10px;
+}
+
+.Dashboard .SiteComponent .button-container button.edit {
+    margin-left: 25px;
+    background: linear-gradient(145deg, #7585ba, #5454d7);
+}
+
+.Dashboard .SiteComponent .button-container button.view {
+    background: linear-gradient(145deg, #74f193, #1aaf36);
+}
+
+
+.Dashboard button {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 100px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.Dashboard button.logout {
+    background: linear-gradient(145deg, #f18574, #a55050);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.Dashboard button.logout:active {
+    box-shadow: inset 6.91px 6.91px 35px #954848, inset -6.91px -6.91px 35px #ff857c;
+}
+
